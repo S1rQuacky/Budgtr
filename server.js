@@ -1,13 +1,14 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
+const Budget = require("./models/budget")
 
 //STATIC
 app.use(express.static("public"));
 
 //INDEX
 app.get('/budgets', (req, res) => {
-    res.render('index.ejs');
+    res.render('index.ejs', {allBudgets: Budget});
 });
 
 //NEW
