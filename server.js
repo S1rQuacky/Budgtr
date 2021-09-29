@@ -23,7 +23,7 @@ app.post('/budgets', (req, res) => {
 
 //SHOW
 app.get('/budgets/:index', (req, res) => {
-    res.render('show.ejs');
+    res.render('show.ejs', {allBudgets: Budget[req.params.index]});
 });
 
 app.listen(PORT, () => {

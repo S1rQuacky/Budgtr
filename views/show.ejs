@@ -1,2 +1,38 @@
-<link rel="stylesheet" href="/normalize.css">
-<link rel="stylesheet" href="/skeleton.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+    <title>Budgtr</title>
+</head>
+<body>
+    <div class='container'> 
+        
+            <h1><%= allBudgets.name %></h1>
+                <ul>
+                    <li>date<br>
+                        <ul><%=allBudgets.date %></ul>
+                    </li>
+                    <li>name<br>
+                        <ul><%=allBudgets.name %></ul>
+                    </li>
+                    <li>from<br>
+                        <ul><%=allBudgets.from %></ul>
+                    </li>
+                    <li>amount<br>
+                        <ul><%=allBudgets.amount %></ul>
+                    </li>
+                    <li>tags<br>
+                        <ul><%=allBudgets.tags %></ul>
+                    </li>
+                </ul>
+                
+
+            <a href="/budgets"><button>Back to Budget</button></a>
+       
+    </div>
+</body>
+</html>
