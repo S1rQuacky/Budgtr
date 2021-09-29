@@ -3,6 +3,9 @@ const app = express();
 const PORT = 3000;
 const Budget = require("./models/budget")
 
+//Middleware
+app.use(express.urlencoded({extended: false}))
+
 //STATIC
 app.use(express.static("public"));
 
@@ -12,13 +15,14 @@ app.get('/budgets', (req, res) => {
 });
 
 //NEW
-app.get('budgets/new', (req, res) => {
-    res.send('new success');
+app.get('/budgets/new', (req, res) => {
+    res.render('new.ejs');
+    
 });
 
 //CREATE
 app.post('/budgets', (req, res) => {
-    res.send('create success');
+    console.log(req.body);
 });
 
 //SHOW
