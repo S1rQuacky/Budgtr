@@ -22,7 +22,13 @@ app.get('/budgets/new', (req, res) => {
 
 //CREATE
 app.post('/budgets', (req, res) => {
-    Budget.push(req.body);
+    const newBudget = {
+      date: req.body.date,
+      name: req.body.name,
+      from: req.body.from,
+      amount: parseInt(req.body.amount),
+    }
+    Budget.push(newBudget);
     res.redirect("/budgets")
 });
 

@@ -14,6 +14,15 @@
             <nav>
                 <a href="/budgets/new"><button>Create New Entry</button></a>
             </nav>
+            <h3>Total:
+
+            <% let bankAccount = 0 %>
+            <% for(let i = 0; i < allBudgets.length; i++) { %>
+                    <% bankAccount += allBudgets[i].amount %>
+            <% } %>
+            <%= bankAccount %>
+            </h3>
+
         <table>
             
             <% for(let i = 0; i < allBudgets.length; i++) { %>
