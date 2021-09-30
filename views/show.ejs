@@ -7,14 +7,19 @@
     <link rel="stylesheet" href="/normalize.css">
     <link rel="stylesheet" href="/skeleton.css">
     <title>Budgtr</title>
+    <style>
+        ul {font-weight: normal; list-style-type: none;}
+        li {font-weight: bold;}
+    </style>
+
 </head>
 <body>
     <div class='container'> 
         
             <h1><%= allBudgets.name %></h1>
                 <ul>
-                    <li>date<br>
-                        <ul><%=allBudgets.date %></ul>
+                    <li >date<br>
+                        <ul ><%=allBudgets.date %></ul>
                     </li>
                     <li>name<br>
                         <ul><%=allBudgets.name %></ul>

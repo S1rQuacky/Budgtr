@@ -9,6 +9,7 @@
     <title>Budgtr</title>
 </head>
 <body>
+    
     <div class='container'>
             <h1>Budgtr ALL</h1>
             <nav>
@@ -20,7 +21,11 @@
             <% for(let i = 0; i < allBudgets.length; i++) { %>
                     <% bankAccount += allBudgets[i].amount %>
             <% } %>
-            <%= bankAccount %>
+            <% if (bankAccount < 0) { %>
+                <span style="color:red"><%= bankAccount %></span>
+            <% } else if (bankAccount > 1000) { %>
+                <span style="color:green"><%= bankAccount %></span>
+            <% } %>
             </h3>
 
         <table>
